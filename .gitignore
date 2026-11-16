@@ -1,0 +1,13 @@
+# competition data and anything derived from it never enters this repository
+data/
+*.mp4
+*.csv
+reports/viewer/
+reports/local/
+evaluation/results/
+evaluation/reports/
+# python
+__pycache__/
+*.pyc
+.venv/
+.vscode/

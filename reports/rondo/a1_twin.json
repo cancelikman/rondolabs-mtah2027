@@ -1,0 +1,347 @@
+{
+ "variant": "merge<0.5s",
+ "split": {
+  "train": [
+   "SC1874553",
+   "SC1886347",
+   "SC1899585",
+   "SC1925299",
+   "SC1927964",
+   "SC1953632"
+  ],
+  "dev": [
+   "SC1959846",
+   "SC1986691"
+  ],
+  "test": [
+   "SC1996435",
+   "SC1996436"
+  ]
+ },
+ "matches": {
+  "SC1874553": {
+   "split": "train",
+   "ball_visible": 0.6014,
+   "nearest_m": {
+    "median": 1.51,
+    "p75": 3.2
+   },
+   "dead_share": 0.4549,
+   "baselines": {
+    "raw": 0.08,
+    "smooth25": 0.2569,
+    "smooth50": 0.2946,
+    "smooth125": 0.2497
+   },
+   "F4": {
+    "spell": 0.4896,
+    "macro": 0.8465,
+    "team_acc": 0.8186,
+    "spell_raw_labels": 0.4802
+   },
+   "taxonomy": {
+    "wrong_team": 67,
+    "spurious_in_opp": 45,
+    "fragment": 35,
+    "merge_opp": 46,
+    "spurious_in_dead": 31,
+    "boundary_both": 45,
+    "as_dead": 15,
+    "boundary_end": 22,
+    "split_opp": 14,
+    "boundary_start": 15,
+    "spurious_other": 1,
+    "merge_dead": 1,
+    "split_dead": 1
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.5466,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.8356,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.5353
+   }
+  },
+  "SC1886347": {
+   "split": "train",
+   "ball_visible": 0.6029,
+   "nearest_m": {
+    "median": 1.52,
+    "p75": 3.1
+   },
+   "dead_share": 0.456,
+   "baselines": {
+    "raw": 0.0696,
+    "smooth25": 0.239,
+    "smooth50": 0.2658,
+    "smooth125": 0.2159
+   },
+   "F4": {
+    "spell": 0.4436,
+    "macro": 0.8446,
+    "team_acc": 0.8021,
+    "spell_raw_labels": 0.4298
+   },
+   "taxonomy": {
+    "wrong_team": 74,
+    "spurious_in_opp": 50,
+    "fragment": 47,
+    "merge_opp": 60,
+    "spurious_in_dead": 29,
+    "boundary_both": 40,
+    "as_dead": 9,
+    "boundary_end": 18,
+    "boundary_start": 9,
+    "split_opp": 8,
+    "split_dead": 3,
+    "spurious_other": 2,
+    "merge_dead": 2
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.4978,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.8395,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.4925
+   }
+  },
+  "SC1899585": {
+   "split": "train",
+   "ball_visible": 0.523,
+   "nearest_m": {
+    "median": 1.53,
+    "p75": 2.98
+   },
+   "dead_share": 0.5077,
+   "baselines": {
+    "raw": 0.0692,
+    "smooth25": 0.237,
+    "smooth50": 0.286,
+    "smooth125": 0.2459
+   },
+   "F4": {
+    "spell": 0.415,
+    "macro": 0.8162,
+    "team_acc": 0.7541,
+    "spell_raw_labels": 0.4106
+   },
+   "taxonomy": {
+    "spurious_in_opp": 70,
+    "wrong_team": 59,
+    "fragment": 40,
+    "boundary_both": 54,
+    "merge_opp": 35,
+    "spurious_in_dead": 26,
+    "as_dead": 23,
+    "boundary_end": 26,
+    "split_opp": 14,
+    "boundary_start": 17,
+    "split_dead": 5
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.4523,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.8048,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.4603
+   }
+  },
+  "SC1925299": {
+   "split": "train",
+   "ball_visible": 0.6274,
+   "nearest_m": {
+    "median": 1.58,
+    "p75": 3.29
+   },
+   "dead_share": 0.4155,
+   "baselines": {
+    "raw": 0.0709,
+    "smooth25": 0.2281,
+    "smooth50": 0.2686,
+    "smooth125": 0.2383
+   },
+   "F4": {
+    "spell": 0.4329,
+    "macro": 0.8327,
+    "team_acc": 0.7937,
+    "spell_raw_labels": 0.4276
+   },
+   "taxonomy": {
+    "wrong_team": 73,
+    "spurious_in_opp": 69,
+    "fragment": 48,
+    "merge_opp": 38,
+    "boundary_both": 47,
+    "spurious_in_dead": 23,
+    "as_dead": 14,
+    "boundary_end": 21,
+    "split_opp": 21,
+    "boundary_start": 15,
+    "spurious_other": 3,
+    "split_dead": 4
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.4864,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.8352,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.4521
+   }
+  },
+  "SC1927964": {
+   "split": "train",
+   "ball_visible": 0.6454,
+   "nearest_m": {
+    "median": 1.43,
+    "p75": 3.01
+   },
+   "dead_share": 0.3694,
+   "baselines": {
+    "raw": 0.076,
+    "smooth25": 0.2871,
+    "smooth50": 0.335,
+    "smooth125": 0.2936
+   },
+   "F4": {
+    "spell": 0.4838,
+    "macro": 0.8734,
+    "team_acc": 0.8314,
+    "spell_raw_labels": 0.4793
+   },
+   "taxonomy": {
+    "wrong_team": 60,
+    "spurious_in_opp": 46,
+    "fragment": 40,
+    "merge_opp": 46,
+    "spurious_in_dead": 19,
+    "boundary_both": 27,
+    "as_dead": 13,
+    "split_opp": 12,
+    "boundary_end": 13,
+    "boundary_start": 9,
+    "split_dead": 7,
+    "merge_dead": 1
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.5582,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.8377,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.5366
+   }
+  },
+  "SC1953632": {
+   "split": "train",
+   "ball_visible": 0.5887,
+   "nearest_m": {
+    "median": 1.62,
+    "p75": 3.32
+   },
+   "dead_share": 0.4446,
+   "baselines": {
+    "raw": 0.0704,
+    "smooth25": 0.2224,
+    "smooth50": 0.2435,
+    "smooth125": 0.2221
+   },
+   "F4": {
+    "spell": 0.4251,
+    "macro": 0.8492,
+    "team_acc": 0.8233,
+    "spell_raw_labels": 0.4147
+   },
+   "taxonomy": {
+    "wrong_team": 71,
+    "merge_opp": 61,
+    "spurious_in_opp": 43,
+    "fragment": 31,
+    "spurious_in_dead": 26,
+    "boundary_both": 42,
+    "as_dead": 12,
+    "boundary_end": 22,
+    "boundary_start": 13,
+    "split_opp": 5,
+    "split_dead": 4
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.475,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.8294,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.4907
+   }
+  },
+  "SC1959846": {
+   "split": "dev",
+   "ball_visible": 0.5927,
+   "nearest_m": {
+    "median": 1.55,
+    "p75": 3.05
+   },
+   "dead_share": 0.4883,
+   "baselines": {
+    "raw": 0.0818,
+    "smooth25": 0.2377,
+    "smooth50": 0.262,
+    "smooth125": 0.2032
+   },
+   "F4": {
+    "spell": 0.4071,
+    "macro": 0.8325,
+    "team_acc": 0.7969,
+    "spell_raw_labels": 0.4012
+   },
+   "taxonomy": {
+    "wrong_team": 74,
+    "spurious_in_opp": 55,
+    "merge_opp": 47,
+    "fragment": 37,
+    "merge_dead": 37,
+    "spurious_in_dead": 32,
+    "boundary_both": 48,
+    "boundary_end": 27,
+    "as_dead": 15,
+    "boundary_start": 17,
+    "split_opp": 12,
+    "spurious_other": 2,
+    "split_dead": 2
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.5161,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.7907,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.4779
+   }
+  },
+  "SC1986691": {
+   "split": "dev",
+   "ball_visible": 0.5734,
+   "nearest_m": {
+    "median": 1.52,
+    "p75": 3.16
+   },
+   "dead_share": 0.4629,
+   "baselines": {
+    "raw": 0.0633,
+    "smooth25": 0.2521,
+    "smooth50": 0.2675,
+    "smooth125": 0.2456
+   },
+   "F4": {
+    "spell": 0.4479,
+    "macro": 0.8306,
+    "team_acc": 0.7676,
+    "spell_raw_labels": 0.441
+   },
+   "taxonomy": {
+    "spurious_in_opp": 61,
+    "wrong_team": 61,
+    "fragment": 45,
+    "boundary_both": 39,
+    "spurious_in_dead": 26,
+    "merge_opp": 33,
+    "as_dead": 13,
+    "boundary_end": 22,
+    "split_opp": 11,
+    "boundary_start": 10,
+    "split_dead": 5,
+    "spurious_other": 3,
+    "merge_dead": 2
+   },
+   "oracles": {
+    "\u00d6l\u00fc top kusursuz olsayd\u0131": 0.4769,
+    "Tak\u0131m karar\u0131 kusursuz olsayd\u0131": 0.8158,
+    "1 sn'den k\u0131sa ger\u00e7ek sahiplikler olmasayd\u0131": 0.4825
+   }
+  }
+ },
+ "F4_mean_spell": 0.443125,
+ "F4_in_band_0_40_0_45": false
+}

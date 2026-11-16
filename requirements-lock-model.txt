@@ -1,0 +1,10 @@
+# Tested Python 3.13.7 CPU environment; optional temporal models also need requirements-tcn.txt.
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.17.1
+scikit-learn==1.6.1
+joblib==1.4.2
+threadpoolctl==3.7.0
+python-dateutil==4.0.0
+pytz==2026.6
+tzdata==2026.6

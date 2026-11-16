@@ -1,0 +1,32 @@
+{
+ "settings": {
+  "team_only": false,
+  "alpha": 0.7,
+  "team_cost": 6.0,
+  "ref_weight": 0.5,
+  "event_strength": 1.0
+ },
+ "rows": [
+  {
+   "match": "SC1996435",
+   "F4_spell": 0.4115326251896814,
+   "new_spell": 0.4658901830282862,
+   "F4_macro": 0.830603816742955,
+   "new_macro": 0.8541095990687843,
+   "delta_spell": 0.0543575578386048,
+   "delta_macro": 0.023505782325829228
+  },
+  {
+   "match": "SC1996436",
+   "F4_spell": 0.39116719242902204,
+   "new_spell": 0.4395759717314488,
+   "F4_macro": 0.8090609622576864,
+   "new_macro": 0.8311814592446778,
+   "delta_spell": 0.04840877930242676,
+   "delta_macro": 0.022120496986991367
+  }
+ ],
+ "mean_delta_spell": 0.05138316857051578,
+ "mean_delta_macro": 0.022813139656410297,
+ "new_package": true
+}

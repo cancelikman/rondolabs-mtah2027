@@ -1,0 +1,57 @@
+{
+ "name": "rondolabs-r8-F7",
+ "description": "Round 9 F6. Posterior mixture: 50% frozen reference (five-match TCN + HGB4) and 50% A3 member (C3w TCN + HGB retrained with the 6 SkillCorner twin training matches at 50% weight). A multi-source correction model (HGB on the blended posteriors, ball/player geometry and past/future window means; trained on 6 twin + 5 IDSSE matches, equal total weight per source, home/away swap symmetric) is mixed in at alpha 0.7. Directed Viterbi, dead-ball prior k=4, team switch cost 6; Smart Tagging kick-off rules after decoding. Round 12 F7: a set/graph model over the ball and all players (rondo/gnn.py; 10 SkillCorner + 5 IDSSE matches) is mixed into the final posteriors at weight 0.5.",
+ "members": [
+  {
+   "name": "reference",
+   "tcn": "ref_tcn.pt",
+   "hgb": "ref_hgb.joblib",
+   "tcn_weight": 0.5,
+   "weight": 0.5,
+   "sha256": {
+    "ref_tcn.pt": "7d845c85e9be678d09cc4cd9e4efdbaf22d635a1575c3a0b55e6a586ef57a2f6",
+    "ref_hgb.joblib": "2f2791aff2227a2e646f1dc67551188803d83c4330068a741df103deaf76f1b2"
+   }
+  },
+  {
+   "name": "a3",
+   "tcn": "c3w_tcn_s1.pt",
+   "hgb": "a3_hgb.joblib",
+   "tcn_weight": 0.5,
+   "weight": 0.5,
+   "sha256": {
+    "c3w_tcn_s1.pt": "5507923d113d7737a81d812fc4a3dd945b682ae9d88bdfce1e7d543937631bb7",
+    "a3_hgb.joblib": "aedad41e08dd889044f7560add3f04a82fe4f15d98dc50bb8c5810697000d802"
+   }
+  }
+ ],
+ "decoder": {
+  "dead_cost": 6.0,
+  "event_strength": 1.0,
+  "stride": 2,
+  "team_cost": 6.0,
+  "temperature": 1.4,
+  "dead_bias": 4.0
+ },
+ "evidence": [],
+ "post": {
+  "kickoff_tags": {
+   "start": true,
+   "max_lead_seconds": 300,
+   "after_goal_seconds": 29
+  }
+ },
+ "selection": "Round 12: selected on N10-A, tested once on N10-B (+0.0158 spellF1 vs F6).",
+ "threads": 2,
+ "stack": {
+  "file": "stack.joblib",
+  "sha256": "5a9ed12714cc8214f7b93e7b70522d405d206aacf5906b2ba05d8902825f3aae",
+  "alpha": 0.7,
+  "team_only": false
+ },
+ "gnn": {
+  "file": "gnn.pt",
+  "weight": 0.5,
+  "sha256": "41dd8c501baecdf34e9413576346df6dc4349cdfdfa0e7a36f1901a5349be9ff"
+ }
+}

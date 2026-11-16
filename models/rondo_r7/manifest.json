@@ -1,0 +1,52 @@
+{
+ "name": "rondolabs-r7-F6",
+ "description": "Round 9 F6. Posterior mixture: 50% frozen reference (five-match TCN + HGB4) and 50% A3 member (C3w TCN + HGB retrained with the 6 SkillCorner twin training matches at 50% weight). A multi-source correction model (HGB on the blended posteriors, ball/player geometry and past/future window means; trained on 6 twin + 5 IDSSE matches, equal total weight per source, home/away swap symmetric) is mixed in at alpha 0.7. Directed Viterbi, dead-ball prior k=4, team switch cost 6; Smart Tagging kick-off rules after decoding.",
+ "members": [
+  {
+   "name": "reference",
+   "tcn": "ref_tcn.pt",
+   "hgb": "ref_hgb.joblib",
+   "tcn_weight": 0.5,
+   "weight": 0.5,
+   "sha256": {
+    "ref_tcn.pt": "7d845c85e9be678d09cc4cd9e4efdbaf22d635a1575c3a0b55e6a586ef57a2f6",
+    "ref_hgb.joblib": "2f2791aff2227a2e646f1dc67551188803d83c4330068a741df103deaf76f1b2"
+   }
+  },
+  {
+   "name": "a3",
+   "tcn": "c3w_tcn_s1.pt",
+   "hgb": "a3_hgb.joblib",
+   "tcn_weight": 0.5,
+   "weight": 0.5,
+   "sha256": {
+    "c3w_tcn_s1.pt": "5507923d113d7737a81d812fc4a3dd945b682ae9d88bdfce1e7d543937631bb7",
+    "a3_hgb.joblib": "aedad41e08dd889044f7560add3f04a82fe4f15d98dc50bb8c5810697000d802"
+   }
+  }
+ ],
+ "decoder": {
+  "dead_cost": 6.0,
+  "event_strength": 1.0,
+  "stride": 2,
+  "team_cost": 6.0,
+  "temperature": 1.4,
+  "dead_bias": 4.0
+ },
+ "evidence": [],
+ "post": {
+  "kickoff_tags": {
+   "start": true,
+   "max_lead_seconds": 300,
+   "after_goal_seconds": 29
+  }
+ },
+ "selection": "Round 9: twin split fixed (SkillCorner 10 ids sorted: 6 train, 2 dev, 2 test). A3 twin dev +1.3 (provisional base, can). A2m multi-source stack: only 3cls alpha 0.7 team 6 passed (twin dev +4.81 vs F4, worst guard -0.79 on WOY/Metrica/Groningen clean+target-like). A4 rejected on guards; A5 no mix change passes. A6 twin test opened once: spellF1 +5.1, macroF1 +2.3 vs F4 (rule >= +2). Public window not used for any choice.",
+ "threads": 2,
+ "stack": {
+  "file": "stack.joblib",
+  "sha256": "5a9ed12714cc8214f7b93e7b70522d405d206aacf5906b2ba05d8902825f3aae",
+  "alpha": 0.7,
+  "team_only": false
+ }
+}
